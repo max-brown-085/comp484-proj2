@@ -1,52 +1,82 @@
-$(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
-    
-    // Called function to update the name, happiness, and weight of our pet in our HTML
-    checkAndUpdatePetInfoInHtml();
-  
-    // When each button is clicked, it will "call" function for that button (functions are below)
-    $('.treat-button').click(clickedTreatButton);
-    $('.play-button').click(clickedPlayButton);
-    $('.exercise-button').click(clickedExerciseButton);
-  
 
+* {
+    box-sizing: border-box;
+  }
   
-    
-  })
+  body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 25px;
+  }
   
-    // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-    var pet_info = {name:"My Pet Name", weight:"??", happiness:"??"};
+  main {
+    display:block;
+    height:175px;
+  }
   
-    function clickedTreatButton() {
-      // Increase pet happiness
-      // Increase pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
-    
-    function clickedPlayButton() {
-      // Increase pet happiness
-      // Decrease pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
-    
-    function clickedExerciseButton() {
-      // Decrease pet happiness
-      // Decrease pet weight
-      checkAndUpdatePetInfoInHtml();
-    }
+  header {
+    border-bottom: 1px solid black;
+  }
   
-    function checkAndUpdatePetInfoInHtml() {
-      checkWeightAndHappinessBeforeUpdating();  
-      updatePetInfoInHtml();
-    }
-    
-    function checkWeightAndHappinessBeforeUpdating() {
-      // Add conditional so if weight is lower than zero.
-    }
-    
-    // Updates your HTML with the current values in your pet_info object
-    function updatePetInfoInHtml() {
-      $('.name').text(pet_info['name']);
-      $('.weight').text(pet_info['weight']);
-      $('.happiness').text(pet_info['happiness']);
-    }
+  h1 {
+    font-weight: bold;
+    color: #000;
+  }
   
+  .bold {
+    font-weight: bold;
+  }
+  
+  p {
+    max-width: 600px;
+  }
+  
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  footer {
+    padding-top: 25px;
+    border-top: 1px solid black;
+  }
+  
+  footer a {
+    float:left;
+    margin:5px;
+  }
+  
+  .pet-image {
+    height:250px;
+  }
+  
+  .dashboard div {
+    display:block;
+  }
+  
+  .pet-image-container {
+    float:left;
+    padding:10px;
+  }
+  
+  .dashboard {
+    float:left;
+    padding:20px;
+  }
+  
+  .button-container {
+    margin-top:20px;
+  }
+  
+  .button-container button {
+    width: 100px;
+      margin-right: 10px;
+      text-align: center;
+      display: inline-block;
+      float: left;
+    font-size:15px;
+    background-color: #1e2835;
+    border-color: #404853;
+    cursor:pointer;
+    background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
+    color: #fafafa;
+  }

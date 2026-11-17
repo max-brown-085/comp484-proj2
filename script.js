@@ -1,48 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>
-        This is your Giga Pet
-      </h1>
-    </header>
+$(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
+    
+    // Called function to update the name, happiness, and weight of our pet in our HTML
+    checkAndUpdatePetInfoInHtml();
+  
+    // When each button is clicked, it will "call" function for that button (functions are below)
+    $('.treat-button').click(clickedTreatButton);
+    $('.play-button').click(clickedPlayButton);
+    $('.exercise-button').click(clickedExerciseButton);
+  
 
-    <main>
-      <section class="pet-image-container">
-         <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="">
-      </section>
-      <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
-        <div class="button-container">
-          <button class="treat-button">
-            Treat
-          </button>
-          <button class="play-button">
-            Play
-          </button>
-          <button class="exercise-button">
-            Exercise
-          </button>
-        </div>
-      </section>
-    </main>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-  </body>
-</html>
+  
+    
+  })
+  
+    // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
+    var pet_info = {name:"My Pet Name", weight:"??", happiness:"??"};
+  
+    function clickedTreatButton() {
+      // Increase pet happiness
+      // Increase pet weight
+      checkAndUpdatePetInfoInHtml();
+    }
+    
+    function clickedPlayButton() {
+      // Increase pet happiness
+      // Decrease pet weight
+      checkAndUpdatePetInfoInHtml();
+    }
+    
+    function clickedExerciseButton() {
+      // Decrease pet happiness
+      // Decrease pet weight
+      checkAndUpdatePetInfoInHtml();
+    }
+  
+    function checkAndUpdatePetInfoInHtml() {
+      checkWeightAndHappinessBeforeUpdating();  
+      updatePetInfoInHtml();
+    }
+    
+    function checkWeightAndHappinessBeforeUpdating() {
+      // Add conditional so if weight is lower than zero.
+    }
+    
+    // Updates your HTML with the current values in your pet_info object
+    function updatePetInfoInHtml() {
+      $('.name').text(pet_info['name']);
+      $('.weight').text(pet_info['weight']);
+      $('.happiness').text(pet_info['happiness']);
+    }
+  
