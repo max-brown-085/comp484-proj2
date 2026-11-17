@@ -65,6 +65,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
     var pet_info = {name:"Friday", weight:10, happiness:10, petsGiven: 0};
 
+    //Shows yippee text box when pet is interacted with
     function petEffect() {
       const $petEffect = $('#pet-effect');
       $petEffect.stop(true, true).fadeIn(200).delay(1000).fadeOut(200);
