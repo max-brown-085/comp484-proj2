@@ -20,12 +20,14 @@
     <main>
       <section class="pet-image-container">
          <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="">
+        <img class="pet-image" src="images/horse.jpg" alt="Your pet image">
+        <div id="pet-effect" style="display: none;">Yipee!</div><!-- Shows text box that says "Yipee!" when interacted with -->
       </section>
       <section class="dashboard">
         <div>Name: <strong><span class="name"></span></strong></div>
         <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
         <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div>Pets Given: <strong><span class="pets-given"></span> pets given</strong></div>
         <div class="button-container">
           <button class="treat-button">
             Treat
@@ -36,6 +38,12 @@
           <button class="exercise-button">
             Exercise
           </button>
+          <button class="pet-button">
+            Pet
+          </button>
+          <button class="reset-button">
+            Reset
+          </button> 
         </div>
       </section>
     </main>
