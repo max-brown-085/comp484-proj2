@@ -1,3 +1,12 @@
+/*Project 2 Details:
+My two unique methods were .mousemove() and .mouseleave()
+The button I added was the pet button which goes along with the new pet counter
+I also added a reset button to go back to default values
+Whenever the pet has an interaction that would increase happiness, a text box will appear that says "Yipee!"
+Because I added two buttons, I made the buttons stack vertically instead of horizontally to make it look better
+Lastly, I added the ability to pet the pet by moving the mouse over the pet image. This is where I used my unique methods. Doing this acts just like you pressed the pet button.
+*/
+
 $(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
     
     // Called function to update the name, happiness, and weight of our pet in our HTML
